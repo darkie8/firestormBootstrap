@@ -20,7 +20,7 @@
     width: 100vw;
 }
 .hidden{
-    overflow-x: hidden;
+    overflow-x: scroll;
 }
 .beta{
     width: 100%;
@@ -28,4 +28,7 @@
 .beta1{
     width: 90%;
     
+}
+o{
+    background-color: red;
 }
