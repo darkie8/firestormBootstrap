@@ -29,6 +29,19 @@
     width: 90%;
     
 }
-Awrt{
-    
+.round{
+    border-radius: 50px !important;
+}
+.bg-info{
+    background: linear-gradient(rgba(255, 255, 255,.5),rgba(255, 255, 255,.5));
+    background: -webkit-linear-gradient(rgba(255, 255, 255,.5),rgba(255, 255, 255,.5));
+    background: -o-linear-gradient(rgba(255, 255, 255,.5),rgba(255, 255, 255,.5));
+}
+.Awrt{
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+.Awrt1{
+    font-size: 1.9vw;
+    font-weight: bold;
 }
