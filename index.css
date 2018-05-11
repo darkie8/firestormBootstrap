@@ -45,3 +45,10 @@
     font-size: 1.9vw;
     font-weight: bold;
 }
+#inputGroup-sizing-sm, #inputGroup-sizing-default {
+    background-color: rgba(255, 255, 255,1);
+    border-right: none;
+    width: 40px;
+    z-index: 1;
+}
+
