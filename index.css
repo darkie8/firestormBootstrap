@@ -16,7 +16,14 @@
     padding: 0 !important ;
     font-family: 'Josefin Sans', sans-serif !important;
 }
-small{
+.onepiece{
+    font-size: 12px !important;
+}
+.onepiece1{
+    font-size: 12px !important;
+}
+.sailormoon1, .onepiece1{
+    font-weight: bold !important;
     font-family: 'Indie Flower', cursive !important;
 }
 .container.alpha{
