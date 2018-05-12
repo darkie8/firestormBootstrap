@@ -53,5 +53,36 @@
     overflow-y: scroll !important;
 }
 .sigma{
-    height: 70vh;
+    height: 80vh;
+    background: linear-gradient(rgba(255, 255, 255,.5),rgba(255, 255, 255,.5)),url(static/background/s5hehiscswz.jpg)
+}
+.lambda{
+    background-size: cover !important;
+    background-position: center !important;
+    height: 4vw;
+    width: 4vw;
+}
+.picture1{
+    background: url(static/A1.jpg);
+}
+.picture2{
+    background: url(static/A2.jpg);
+}
+.picture3{
+    background: url(static/A3.jpg);
+}
+.picture4{
+    background: url(static/A4.jpg);
+}
+.picture5{
+    background: url(static/A5.jpg);
+}
+.picture6{
+    background: url(static/A6.jpg);
+}
+.picture7{
+    background: url(static/A7.jpg);
+}
+.picture8{
+    background: url(static/A8.jpg);
 }
