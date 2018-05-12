@@ -1,3 +1,6 @@
+.body{
+    font-family: 'Josefin Sans', sans-serif;
+}
 .red-back{
     
     height: 100vh;
@@ -11,7 +14,10 @@
 .fullCover{
     margin: 0 !important;
     padding: 0 !important ;
-    
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+small{
+    font-family: 'Indie Flower', cursive !important;
 }
 .container.alpha{
     width: 100vw;
@@ -54,13 +60,23 @@
 }
 .sigma{
     height: 65vh;
-    background: linear-gradient(rgba(255, 255, 255,.5),rgba(255, 255, 255,.5)),url(static/background/s5hehiscswz.jpg);
+    background: linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);
+    background: -webkit-linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);
+    background: -moz-linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);
+    background: -o-linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);    
 }
 .gama{
-    background: linear-gradient(rgba(255, 255, 255,.5),rgba(255, 255, 255,.5)),url(static/background/s5hehiscswz.jpg);
+    background: linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);
+    background: -webkit-linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);
+    background: -moz-linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);
+    background: -o-linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);    
+    border-bottom: .2px solid rgba(0, 0, 0,.5);
 }
 .col-4{
-    background: linear-gradient(rgba(255, 255, 255,.5),rgba(255, 255, 255,.5)),url(static/background/s5hehiscswz.jpg);
+    background: linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);
+    background: -webkit-linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);
+    background: -moz-linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);
+    background: -o-linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);    
 }
 .lambda{
     background-size: cover !important;
