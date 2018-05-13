@@ -118,3 +118,7 @@
 .picture8{
     background: url(static/A8.jpg);
 }
+.zebra{
+    height: 0;
+    overflow: hidden;
+}
