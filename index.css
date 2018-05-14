@@ -70,6 +70,13 @@
     background: -moz-linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);
     background: -o-linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);    
 }
+.dreco{
+    background: linear-gradient(rgba(250, 176, 18,.7),rgba(250, 176, 18,.7)),url(static/background/s5hehiscswz.jpg) !important;
+    background: -webkit-linear-gradient(rgba(250, 176, 18,.7),rgba(250, 176, 18,.7)),url(static/background/s5hehiscswz.jpg) !important;
+    background: -moz-linear-gradient(rgba(250, 176, 18,.7),rgba(250, 176, 18,.7)),url(static/background/s5hehiscswz.jpg) !important;
+    background: -o-linear-gradient(rgba(250, 176, 18,.7),rgba(250, 176, 18,.7)),url(static/background/s5hehiscswz.jpg) !important;    
+    
+}
 @media (max-height: 540px){
     .sigma{
         height: 40vh;
@@ -94,30 +101,6 @@
     height: 4vw;
     width: 4vw;
 }
-.picture1{
-    background: url(static/A1.jpg);
-}
-.picture2{
-    background: url(static/A2.jpg);
-}
-.picture3{
-    background: url(static/A3.jpg);
-}
-.picture4{
-    background: url(static/A4.jpg);
-}
-.picture5{
-    background: url(static/A5.jpg);
-}
-.picture6{
-    background: url(static/A6.jpg);
-}
-.picture7{
-    background: url(static/A7.jpg);
-}
-.picture8{
-    background: url(static/A8.jpg);
-}
 .baboon{
     height: 80vh !important;
 }
@@ -128,4 +111,8 @@
 }
 .Anushka{
     width: auto;
+}
+.rounded{
+    border-radius: 5px;
+    background-color: aqua;
 }
