@@ -120,5 +120,17 @@
 }
 .zebra{
     height: 0;
+    visibility: hidden;
     overflow: hidden;
+}
+.baboon{
+    height: 80vh !important;
+}
+@media (max-height: 900px){
+    .baboon{
+        height: 40vh;
+    }
+}
+.Anushka{
+    width: auto;
 }
