@@ -83,11 +83,14 @@
     }
 }
 .gama{
+    border-bottom: .2px solid rgba(0, 0, 0,.5);
+}
+.kiop{
     background: linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);
     background: -webkit-linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);
     background: -moz-linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);
     background: -o-linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);    
-    border-bottom: .2px solid rgba(0, 0, 0,.5);
+
 }
 .col-4{
     background: linear-gradient(rgba(255, 255, 255,.7),rgba(255, 255, 255,.7)),url(static/background/s5hehiscswz.jpg);
@@ -115,4 +118,13 @@
 .rounded{
     border-radius: 5px;
     background-color: aqua;
+}
+.pr1{
+    text-align: center;
+}
+#df{
+  font-size: 1.2vw !important;
+}
+.be{
+    visibility: hidden;
 }

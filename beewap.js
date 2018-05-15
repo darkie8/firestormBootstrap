@@ -1,12 +1,33 @@
   $(document).ready(function(){
-    $(".drooid").click(function(){
-        $("#chat1,#chat").css({"height":"0","visibility":"hidden","overflow":"hidden"});
-    });
-    for(let i =0;i<9;i++)
-    {$(`#pix${i}`).click(function () { 
+    
+    for(let i =1;i<9;i++)
+    {   $(`#level`).append(`<div class="row">
+
+    <div class="col-12 d-flex px-2 flex-row align-items-center py-3 kiop gama drooid" id="pix${i}">
+        
+        <div class="py-3 px-3 rounded-circle picture${i} lambda"></div>
+        <p class="text-left my-auto Awrt px-2 pl-3 sailormoon">Get Notified of New Messages<br>
+            <small class="text-left ASwrt sailormoon1">Turn On Desktop Notification</small></p>
+            <div class="pix${i} ml-auto le"><small id="df">yesterday</small></div>
+    </div>`);
+    $(`.picture${i}`).css(`background`,`url(static/A${i}.jpg)`);
+    $(`.pix${i}`).append(`
+    <div class="dropdown d-flex justify-content-center be">
+    <button type="button" class="btn btn-link  pr-1" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-angle-down"></i>
+        </button>
+        <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <a class="dropdown-item" href="#">Separated link</a>
+      </div>
+    </div> `);
+        
+        $(`#pix${i}`).click(function () { 
         $(".zeta").attr("src", `static/A${i}.jpg`);
         $(`.set`).empty();
-    
+        
     for(let x =1;x<=i;x++)
        {$(`.set`).append(`<div class="Anushka my-3 mx-3 d-flex py-3">
                                 <div class="flex-fill wb" id="cb1"><p class="mx-4 rounded w-50">Lorem ipsum dolor sit amet consectetur.</p></div>
@@ -19,14 +40,28 @@
                         
                             }
     });
-    $(`.picture${i}`).css(`background`,`url(static/A${i}.jpg)`);
+    $(`#pix${i}`).hover(function () {
+        $(this).find(".dropdown").removeClass("be");
+        
+    }, function () {
+        $(this).find(".dropdown").addClass("be");
     }
-
-    for(let m=1;m<9;m++){
-       $(`#pix${m}`).click(function(){
-           $(this).removeClass("dreco");
-        })
+);
+    
     }
     
+  
+    function zm(){$(`.dropdown`).click(function(){
+        let n= true;
+        console.log(n);
+      })}
+      
+    
+    $(`#pix1,#pix3,#pix6`).addClass("dreco").addClass("shadow");
+    
+
+    $(".drooid").click(function(){
+        $("#chat1,#chat").css({"height":"0","visibility":"hidden","overflow":"hidden"});
+    });
     }); 
 
