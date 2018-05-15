@@ -1,7 +1,17 @@
+var readChoice= [`Mark as unread`,'Mark as read']
+    let a = true;
+    let A;
+    if(a==true){
+     A = readChoice[0];
+    }
+    console.log(A)
+    var n = false
+
   $(document).ready(function(){
     
     for(let i =1;i<9;i++)
-    {   $(`#level`).append(`<div class="row">
+    {   
+        $(`#level`).append(`<div class="row">
 
     <div class="col-12 d-flex px-2 flex-row align-items-center py-3 kiop gama drooid" id="pix${i}">
         
@@ -20,11 +30,19 @@
         <a class="dropdown-item" href="#">Action</a>
         <a class="dropdown-item" href="#">Another action</a>
         <a class="dropdown-item" href="#">Something else here</a>
-        <a class="dropdown-item" href="#">Separated link</a>
+        <a class="dropdown-item" href="#">${A}</a>
       </div>
     </div> `);
+    
+    $(`.dropdown`).on({
+         click: function(){ n= true},
+         mouseleave: function(){n= false}
+    });
         
-        $(`#pix${i}`).click(function () { 
+        $(`#pix${i}`).click(function () {
+        if(n==true){
+            return;
+        }
         $(".zeta").attr("src", `static/A${i}.jpg`);
         $(`.set`).empty();
         
@@ -46,16 +64,11 @@
     }, function () {
         $(this).find(".dropdown").addClass("be");
     }
-);
-    
+    );
     }
     
   
-    function zm(){$(`.dropdown`).click(function(){
-        let n= true;
-        console.log(n);
-      })}
-      
+    
     
     $(`#pix1,#pix3,#pix6`).addClass("dreco").addClass("shadow");
     
