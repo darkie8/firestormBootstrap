@@ -1,12 +1,6 @@
 var readChoice= [`Mark as unread`,'Mark as read']
     let p = [];
-
-    let loi=()=>{for(let i =1;i<9;i++){
-         p.push(true)
-     } 
-    return p
-    } 
-     let a = loi()
+     let a= true
      console.log(a) 
      let A= readChoice[0];
     var n = false
@@ -44,22 +38,29 @@ var readChoice= [`Mark as unread`,'Mark as read']
     });
     $(`#reUn${i}`).click (function(){
         
-        if(a[i-1]==true)
+        if(a==true)
         { 
              
         $(`#pix${i}`).addClass("dreco").addClass("shadow");
-           a.splice(i-1, 1, 'false');
-             
+             a= false
         ;}
-        if(a[i-1]==false) {
+        else {
                  
                 $(`#pix${i}`).removeClass("dreco").removeClass("shadow");
-                a.splice(i-1, 1, 'true');
-        }})
+                a= true
+        }
+        console.log(a)
+        console.log(n)
+         })
         
         $(`#pix${i}`).click(function () {
         if(n==true){
             return;
+        }
+        console.log(n)
+        if(a==false){
+            $(this).removeClass("dreco").removeClass("shadow");
+                a= true
         }
         $(".zeta").attr("src", `static/A${i}.jpg`);
         $(`.set`).empty();
