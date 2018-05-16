@@ -136,5 +136,16 @@ var readChoice= [`Mark as unread`,'Mark as read'] // declared an array
         }
         $("#chat1,#chat").css({"height":"0","visibility":"hidden","overflow":"hidden"});
     });
+    $(`.myPix`).click(function () { 
+        $(".noob").animate({width: '100%'});
+        $(".jig").animate({width: '160',height: '160'});
+        $(".mig").animate({width: '100',height: '100'});
+        
+    });
+    $(`#prev`).click(function () { 
+        $(".noob").animate({width: '0%'});
+        $(".jig").animate({width: '0',height: '0'});
+        $(".mig").animate({width: '0',height: '0'});
+    });
     }); 
 
