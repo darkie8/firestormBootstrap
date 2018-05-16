@@ -1,6 +1,9 @@
 var readChoice= [`Mark as unread`,'Mark as read']
     let p = [];
-     let a= true
+     let a = []
+     for(k=0;k<8;k++){
+         a.push(true)
+     }
      console.log(a) 
      let A= readChoice[0];
     var n = false
@@ -38,30 +41,34 @@ var readChoice= [`Mark as unread`,'Mark as read']
     });
     $(`#reUn${i}`).click (function(){
         
-        if(a==true)
+        if(a[i-1]==true)
         { 
              
         $(`#pix${i}`).addClass("dreco").addClass("shadow");
-             a= false
-        ;}
+             a[i-1]= false
+             
+        }
         else {
                  
                 $(`#pix${i}`).removeClass("dreco").removeClass("shadow");
-                a= true
+                a[i-1]= true
         }
         console.log(a)
         console.log(n)
          })
         
         $(`#pix${i}`).click(function () {
+            
         if(n==true){
+            
             return;
         }
-        console.log(n)
-        if(a==false){
+        if(a[i-1]==false){
             $(this).removeClass("dreco").removeClass("shadow");
-                a= true
+            a[i-1]= true
         }
+         
+        
         $(".zeta").attr("src", `static/A${i}.jpg`);
         $(`.set`).empty();
         
