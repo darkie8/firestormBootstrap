@@ -1,16 +1,21 @@
 var readChoice= [`Mark as unread`,'Mark as read']
-    let a = true;
-    let A;
-    if(a==true){
-     A = readChoice[0];
-    }
-    console.log(A)
+    let p = [];
+
+    let loi=()=>{for(let i =1;i<9;i++){
+         p.push(true)
+     } 
+    return p
+    } 
+     let a = loi()
+     console.log(a) 
+     let A= readChoice[0];
     var n = false
 
   $(document).ready(function(){
     
     for(let i =1;i<9;i++)
-    {   
+    { 
+      
         $(`#level`).append(`<div class="row">
 
     <div class="col-12 d-flex px-2 flex-row align-items-center py-3 kiop gama drooid" id="pix${i}">
@@ -30,14 +35,27 @@ var readChoice= [`Mark as unread`,'Mark as read']
         <a class="dropdown-item" href="#">Action</a>
         <a class="dropdown-item" href="#">Another action</a>
         <a class="dropdown-item" href="#">Something else here</a>
-        <a class="dropdown-item" href="#">${A}</a>
+        <a class="dropdown-item" href="#" id="reUn${i}">${A}</a>
       </div>
     </div> `);
-    
     $(`.dropdown`).on({
          click: function(){ n= true},
          mouseleave: function(){n= false}
     });
+    $(`#reUn${i}`).click (function(){
+        
+        if(a[i-1]==true)
+        { 
+             
+        $(`#pix${i}`).addClass("dreco").addClass("shadow");
+           a.splice(i-1, 1, 'false');
+             
+        ;}
+        if(a[i-1]==false) {
+                 
+                $(`#pix${i}`).removeClass("dreco").removeClass("shadow");
+                a.splice(i-1, 1, 'true');
+        }})
         
         $(`#pix${i}`).click(function () {
         if(n==true){
@@ -66,14 +84,16 @@ var readChoice= [`Mark as unread`,'Mark as read']
     }
     );
     }
-    
   
     
     
-    $(`#pix1,#pix3,#pix6`).addClass("dreco").addClass("shadow");
+    // $(`#pix1,#pix3,#pix6`).addClass("dreco").addClass("shadow");
     
 
     $(".drooid").click(function(){
+        if(n==true){
+            return;
+        }
         $("#chat1,#chat").css({"height":"0","visibility":"hidden","overflow":"hidden"});
     });
     }); 
