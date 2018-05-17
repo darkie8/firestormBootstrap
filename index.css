@@ -6,7 +6,7 @@
     
 }
 .yellow-back{
-       background-color: yellow;
+       background-color: white;
        height: 100vh;
     }
 .fullCover{
@@ -127,4 +127,37 @@
 }
 .be{
     visibility: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+.wb{
+    font-size: 1.4vmax;
+}
+.noob{
+    height: 100vh;
+}
+.noob1{
+    height: 80%;
+}
+@media(max-height:500px){
+   .noob1{
+       height: 70%;
+   }
+}
+.btn-link {
+    color: black !important ;
 }
