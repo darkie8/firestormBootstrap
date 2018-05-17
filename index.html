@@ -12,35 +12,35 @@
 </head>
 
 <body class="fullCover" style="height: 100vh; overflow: hidden !important;">
-        <!--viewing picture of me-->
-    <div  class="col" id="pictureView" style="position: absolute;
+    <!--viewing picture of me-->
+    <div class="col" id="pictureView" style="position: absolute;
         background-color: rgb(32, 28, 28);
         z-index: 8;height: 0%;overflow-x: hidden;overflow-y: scroll;width: 100%;">
         <div class="row  px-0 bg-secondary">
-                <div class="col d-flex flex-row-reverse pt-2" style="color: whitesmoke">
-                    <div class="pr-4 jigsaw1"><i class="far fa-times-circle" style="width: 3vmax;height: 3vmax;"></i></div>
-                </div>
-                <div class="w-100"></div>
-                <div class="col text-center">
-                    <hr>
-                    <p style="font-size: 2vmax;color: whitesmoke">Profile Picture</p>
-                </div>
+            <div class="col d-flex flex-row-reverse pt-2" style="color: whitesmoke">
+                <div class="pr-4 jigsaw1"><i class="far fa-times-circle" style="width: 3vmax;height: 3vmax;"></i></div>
             </div>
-            <div class="col d-flex justify-content-center you">
-                
-                        
+            <div class="w-100"></div>
+            <div class="col text-center">
+                <hr>
+                <p style="font-size: 2vmax;color: whitesmoke">Profile Picture</p>
             </div>
+        </div>
+        <div class="col d-flex justify-content-center you">
+
+
+        </div>
     </div>
     <!--container for the page-->
-    <div class="container alpha fullCover" >
+    <div class="container alpha fullCover">
         <div class="row alpha fullCover">
             <!--1st variant for residing contacts-->
             <div class="col-4 red-back hidden fullCover" id="1p">
-                
-                
+
+
                 <!--info about me-->
                 <div class="noob" style="position: absolute;background-color: white;z-index: 6;width: 0%;overflow-x: hidden;overflow-y: scroll">
-                    
+
                     <div class="row" style="padding: 0 !important;">
                         <div class="col d-flex align-items-center flex-row-reverse" style="height: 10vmax;background-color: tomato">
                             <div id="prev">
@@ -55,13 +55,13 @@
                                     <img src="static/imgme.jpg" class="rounded-circle d-none d-lg-block jig " width="0" height="0">
                     <img src="static/imgme.jpg" class="rounded-circle d-md-block d-lg-none mig" width="0" height="0">
                                     </button>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                            <button class="dropdown-item" id="viewPix" type="button">View picture</button>
-                                            <button class="dropdown-item" type="button">Download</button>
-                                            <button class="dropdown-item" id="propixch" type="button">Change profile picture</button>
-                                          </div>
-                          
-                        </div>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <button class="dropdown-item" id="viewPix" type="button">View picture</button>
+                                    <button class="dropdown-item" type="button">Download</button>
+                                    <button class="dropdown-item" id="propixch" type="button">Change profile picture</button>
+                                </div>
+
+                            </div>
                         </div>
                         <div class="w-100" style="height: 0vmax;"></div>
                         <div class="col d-flex align-items-center shadow" style="height: 10vmax;">
@@ -99,8 +99,25 @@
                         </div><br><br><br><br><br><br><br>
                         <div class="w-100" style="height: 0vmax;"></div>
                         <div class="col" style="height: 2vmax;background-color: thistle"></div>
-                    </div> 
+                    </div>
                 </div>
+                <div class="toob" style="position: absolute;background-color: white;z-index: 8;width: 0%;overflow-x: hidden;overflow-y: scroll;height: 100vh;">
+                        <div class="row  px-0" style="background-color: tomato;">
+                                <div class="col d-flex flex-row-reverse pt-2">
+                                    <div class="pr-2 pretty"><i class="far fa-times-circle" style="width: 2vmax;height: 2vmax;"></i></div>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col text-center">
+                                    <hr>
+                                    <h6>Contacts</h6>
+                                </div>
+                            </div>
+                            <br>
+                        <div class="container printcont">
+                                <h3>#A<h3>
+                         </div>      
+                </div>
+                <!--navbar 1st variant-->
                 <nav class="navbar navbar-expand navbar-light bg-light border-left py-1">
                     <a class="navbar-nav d-flex  align-items-center" style="width: 90%"><img src="static/imgme.jpg" class="myPix rounded-circle d-md-block d-lg-none" width="30" height="30">
                             <img src="static/imgme.jpg" class="rounded-circle d-none d-lg-block myPix" width="50" height="50">
@@ -109,26 +126,23 @@
                                     <small class="ml-2 Awrt">Online</small>
                                 </div>
                             </a>
-                    <!--navbar 1st variant-->
-                    
-                        
-                        <a class="navbar-nav mx-3">
+                    <a class="navbar-nav mx-3" id="contactsAll">
                             <i class="far fa-compass lopa"></i>
                         </a>
-                        
-                                <div class="dropdown">
-                                        <button type="button" class="btn btn-link" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-link" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fas fa-ellipsis-v lopa"></i>
                                             </button>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                    <button class="dropdown-item" type="button">Action</button>
-                                                    <button class="dropdown-item" type="button">Another action</button>
-                                                    <button class="dropdown-item" type="button">Something else here</button>
-                                                  </div>
-                                  
-                                </div>
-                        
-                    
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item" type="button">Action</button>
+                            <button class="dropdown-item" type="button">Another action</button>
+                            <button class="dropdown-item" type="button">Something else here</button>
+                        </div>
+
+                    </div>
+
+
 
                 </nav>
                 <!--1st variant of container with differen t utilities-->
@@ -151,7 +165,7 @@
                 <!--Chats contacts-->
                 <a href="#2p" style="color: black;font-style: normal;text-decoration: none;">
                     <div class="container sigma scroll" id="level">
-    
+
                     </div>
                 </a>
             </div>
@@ -184,36 +198,36 @@
                                         </div>
                                     </a>
                                 <!--navbar 1st variant residing chat-->
-                                
+
                                 <a href="#1p" class="navbar-nav mx-3 je">
                                         
                                     </a>
-                                    <a class="navbar-nav mx-3">
+                                <a class="navbar-nav mx-3">
                                         <i class="fas fa-phone lopa"></i>
                                     </a>
-                                    <a class="navbar-nav mx-3">
+                                <a class="navbar-nav mx-3">
                                             <i class="fas fa-video lopa"></i>
                                         </a>
-                                    <div class="dropdown">
-                                            <button type="button" class="btn btn-link" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="dropdown">
+                                    <button type="button" class="btn btn-link" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fas fa-ellipsis-v lopa"></i>
                                                 </button>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                        <button class="dropdown-item" type="button">Action</button>
-                                                        <button class="dropdown-item" type="button">Another action</button>
-                                                        <button class="dropdown-item" type="button">Something else here</button>
-                                                      </div>
-                                      
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <button class="dropdown-item" type="button">Action</button>
+                                        <button class="dropdown-item" type="button">Another action</button>
+                                        <button class="dropdown-item" type="button">Something else here</button>
                                     </div>
-                                
+
+                                </div>
+
                             </nav>
                         </div>
                         <!--chat flex-->
-                        
-                            <div class="d-flex baboon flex-column scroll set">
-                             
-                            </div>
-                    
+
+                        <div class="d-flex baboon flex-column scroll set">
+
+                        </div>
+
 
 
                         <div class="mt-auto bg-light">
@@ -232,34 +246,34 @@
                 <div class="d-flex flex-row-reverse" style="width: 100%;">
                     <div class="phi" id="phi" style="background: white;overflow-y: hidden;overflow-x: hidden;">
                         <div class="row  px-0" style="background-color: tomato;">
-                                <div class="col d-flex flex-row-reverse pt-2">
-                                    <div class="pr-2 jigsaw"><i class="far fa-times-circle" style="width: 2vmax;height: 2vmax;"></i></div>
-                                </div>
-                                <div class="w-100"></div>
-                                <div class="col text-center">
-                                    <hr>
-                                    <h6>Contact Info</h6>
-                                </div>
+                            <div class="col d-flex flex-row-reverse pt-2">
+                                <div class="pr-2 jigsaw"><i class="far fa-times-circle" style="width: 2vmax;height: 2vmax;"></i></div>
                             </div>
+                            <div class="w-100"></div>
+                            <div class="col text-center">
+                                <hr>
+                                <h6>Contact Info</h6>
+                            </div>
+                        </div>
                         <div class="noob1" style="background: white;overflow-y: scroll;overflow-x: hidden;">
-                            
-                           <div class="container px-0 py-0">
+
+                            <div class="container px-0 py-0">
                                 <div class="col kiop d-flex justify-content-center align-items-center" style="height: 20vmax;">
-                                        
-                                        <div class="dropdown">
-                                            <button type="button" class="btn btn-link takeshi" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-link takeshi" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <img src="static/imgme.jpg" id="cea" class="zeta1 rounded-circle d-md-block d-lg-none" width="0" height="0">
                                         <img src="static/imgme.jpg" id="cea1" class="zeta1 rounded-circle d-none d-lg-block" width="0" height="0">
                                 
                                                 </button>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                        <button class="dropdown-item" id="contpro" type="button">View picture</button>
-                                                        <button class="dropdown-item" id="contdwn" type="button">Download</button>
-                                                        
-                                                      </div>
-                                      
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <button class="dropdown-item" id="contpro" type="button">View picture</button>
+                                            <button class="dropdown-item" id="contdwn" type="button">Download</button>
+
+                                        </div>
+
                                     </div>
-                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col d-flex flex-column py-2 bg-light">
                                         <small class="px-2" style="font-size: 1.2vmax"><b>Name</b></small>
@@ -285,20 +299,20 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                            <div class="col bg-info">
-                                                    <p class="px-0 py-1 my-1"><b>Media</b></p>
-                                            </div>
+                                        <div class="col bg-info">
+                                            <p class="px-0 py-1 my-1"><b>Media</b></p>
                                         </div>
-                                        <div class="w-100" style="width: 10px;"></div>
+                                    </div>
+                                    <div class="w-100" style="width: 10px;"></div>
                                     <div class="row">
-                                                <div class="col d-flex justify-content-between">
-                                                        <p class="px-0 py-1 my-1"><b>mute</b></p>
-                                                        <div class="d-flex align-items-center"><i class="fas fa-volume-up"></i></div>
-                                                </div>
-                                    </div>    
+                                        <div class="col d-flex justify-content-between">
+                                            <p class="px-0 py-1 my-1"><b>mute</b></p>
+                                            <div class="d-flex align-items-center"><i class="fas fa-volume-up"></i></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                
-                           </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>

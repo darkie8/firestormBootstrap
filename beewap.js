@@ -136,6 +136,10 @@ var contJSON= {
         </a>
       </div>`).addClass("bg-dark").addClass("align-items-center").addClass("justify-content-center")
       $("#chat1,#chat").css({"height":"0","visibility":"hidden","overflow":"hidden"});
+      $(".zeta,.zeta1").attr("src", `static/A${i}.jpg`);
+      $(`.contName`).text(`${contJSON.contact[i-1].name}`);
+        $(`.number`).text(`${contJSON.contact[i-1].number}`);
+        $(`.lstSeen`).text(`${contJSON.contact[i-1].last_seen}`);
     });
     $(`.ken`).on({
          click: function(){ n= true}, // if dropdown is clicked..n=true
@@ -321,5 +325,26 @@ var contJSON= {
         $(`.del`).css({"height": "0","opacity":"0"});
         $(`.sigma`).css("height","70vh");
     }
+    // contacts menu
+    $(`#contactsAll`).click(function () { 
+            $(".toob").animate({width: '100%'});
+            for(i=0;i<8;i++){
+                $(`.printcont`).append(`<div class="row">
+                <div class="col-12 d-flex flex-column bg-info dir" style="color: beige" id="sol${i+1}">
+                    
+                    <p class="ASwrt">${contJSON.contact[i].name}</p>
+                    <p class="Aswrt1">${contJSON.contact[i].number}</p>
+                </div>
+            </div>
+            <br>
+        </div> `);
+            }
+    
+        
+    });
+    $(".pretty").click(function () { 
+        $(".toob").animate({width: '0%'});
+        
+    });
     }); 
 
