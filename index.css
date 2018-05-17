@@ -164,3 +164,19 @@
 .dropdown-menu{
     font-size: 1.4vmax !important;
 }
+.pain{
+    width: 0% !important;
+
+}
+.pain1{
+    width: 100% !important;
+}
+@media (min-width: 850px){
+    .pain{
+        width: 60% !important;
+
+    }
+    .pain1{
+        width: 40% !important;
+    }
+}

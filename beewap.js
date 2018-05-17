@@ -103,16 +103,46 @@ var contJSON= {
         <div class="dropdown-menu">
         <a class="dropdown-item" href="#">Action</a>
         <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
+        <a class="dropdown-item" id="pork${i}" href="#">Stories</a>
         <a class="dropdown-item" href="#" id="reUn${i}">${A}</a>
       </div>
     </div> `);
+    $(`#pork${i}`).click(function () { 
+        $(`.set`).html(`<p style="font-size:1.5vmax;color:white">Stories</p><div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center align-items-center bg-dark" style=height: 100% !imortant"><img class="d-block" src="static/A${i}.jpg" style="height: 60vmin;width:60vmin !important" alt="First slide"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center bg-dark" style=height: 100% !imortant"><img class="d-block" src="static/A${i}.jpg" style="height: 60vmin;width:60vmin" alt="Second slide"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center bg-dark" style=height: 100% !imortant"><img class="d-block" src="static/A${i}.jpg" style="height: 60vmin;width:60vmin" alt="Third slide"></div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>`).addClass("bg-dark").addClass("align-items-center").addClass("justify-content-center")
+      $("#chat1,#chat").css({"height":"0","visibility":"hidden","overflow":"hidden"});
+    });
     $(`.ken`).on({
          click: function(){ n= true}, // if dropdown is clicked..n=true
          mouseleave: function(){n= false} // if mouse leaves dropdown n=false
     });
     // #reUn${i} in dropdown class menu is clicked
     $(`#reUn${i}`).click (function(){
+
         // #pix${i} container will be higlighted and #reUn${i} container will be changed to unread 
         if(a[i-1]==true)
         { 
@@ -140,6 +170,7 @@ var contJSON= {
             
             return;
         }
+
 
         // ending the highlight if id =pix(number) is clicked 
         if(a[i-1]==false){
@@ -172,7 +203,7 @@ var contJSON= {
                             <div class="Anushka my-3 mx-3 d-flex py-3">
                                 <div class="flex-fill wb" id="cb1"><p class="mx-auto rounded"></p></div>
                                 <div class="flex-fill wb " id="cb11"><p class="mx-4 rounded float-right w-50">Lorem ipsum dolor sit amet consectetur.</p></div>
-                            </div>`) ;
+                            </div>`).removeClass("bg-dark").removeClass("align-items-center").removeClass("justify-content-center") ;
                         
                             } // for loop ends
     }); // function calling ends
@@ -185,6 +216,8 @@ var contJSON= {
         $(this).find(".ken").addClass("be");
     }
     ); // function calling ends
+    
+
     } // for loop ends
     
     //dclaring function to see unseen effect
@@ -217,26 +250,60 @@ var contJSON= {
         $(".jig").animate({width: '0',height: '0'});
         $(".mig").animate({width: '0',height: '0'});
     });
-    $(`.zeta`).click(function () { 
-        $(".io").animate({width: '60%'});
+    let yu;
+
+    $(`.zeta`).click(function() {
+        $(`.io`).addClass("pain");
+        $("#phi").addClass("pain1");
+        if($(window).width() >= 850 )
+    {   // getting in the contact info window
         
-    });
-    $(`.jigsaw`).click(function () { 
+        $(".io").animate({width: '60%'});
+        $("#phi").css("width","40%");
+        
+       
+    } else
+    {
+        // getting in the contact info window
+        
+            $(".io").animate({width: '0%'});
+            $("#phi").css("width","100%");
+            
+        
+    }});
+   
+
+    // getting out of the contact info window
+      $(`.jigsaw`).click(function () { 
         $(".io").animate({width: '100%'});
         $("#cea1").animate({width: '0',height: '0'});
         $("#cea").animate({width: '0',height: '0'});
-    });
+        $(`.io`).removeClass("pain");
+        $("#phi").removeClass("pain1");
+       });
+
     // viewing pro pix
     $(`#viewPix`).click(function () { 
+        
+        $(".you").html(`<img src="static/imgme.jpg" class="rounded d-none d-lg-block he " width="0" height="0">`)
         $("#pictureView").animate({height: '100%'});
-        $(".he").animate({width: '70vw',height: '70vw'});
+        $(".he").animate({width: '80vmin',height: '80vmin'});
         
     });
     // exiting pro pix view
     $(`.jigsaw1`).click(function () { 
         $("#pictureView").animate({height: '0%'});
         $(".he").animate({width: '0',height: '0'});
+        $(".you").find(".zeta1").animate({width: '0',height: '0'});
         
     });
+    // to see contact pix in big window
+    $(`#contpro`).click(function () { 
+        
+        $("#pictureView").animate({height: '100%'});
+        $(".you").html($(".takeshi").html())
+        $(".you").find(".zeta1").removeClass("rounded-circle").addClass("rounded").animate({width: '80vmin',height: '80vmin'}); 
+    });
+    
     }); 
 
