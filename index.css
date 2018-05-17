@@ -161,3 +161,6 @@
 .btn-link {
     color: black !important ;
 }
+.dropdown-menu{
+    font-size: 1.4vmax !important;
+}
