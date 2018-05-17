@@ -11,7 +11,7 @@
 
 </head>
 
-<body class="fullCover">
+<body class="fullCover" style="height: 100vh; overflow: hidden !important;">
         <!--viewing picture of me-->
     <div  class="col" id="pictureView" style="position: absolute;
         background-color: rgb(32, 28, 28);
@@ -32,10 +32,10 @@
             </div>
     </div>
     <!--container for the page-->
-    <div class="container alpha fullCover">
+    <div class="container alpha fullCover" >
         <div class="row alpha fullCover">
             <!--1st variant for residing contacts-->
-            <div class="col-4 red-back hidden fullCover">
+            <div class="col-4 red-back hidden fullCover" id="1p">
                 
                 
                 <!--info about me-->
@@ -99,26 +99,26 @@
                         </div><br><br><br><br><br><br><br>
                         <div class="w-100" style="height: 0vmax;"></div>
                         <div class="col" style="height: 2vmax;background-color: thistle"></div>
-                    </div>
+                    </div> 
                 </div>
                 <nav class="navbar navbar-expand navbar-light bg-light border-left py-1">
                     <a class="navbar-nav d-flex  align-items-center" style="width: 90%"><img src="static/imgme.jpg" class="myPix rounded-circle d-md-block d-lg-none" width="30" height="30">
                             <img src="static/imgme.jpg" class="rounded-circle d-none d-lg-block myPix" width="50" height="50">
                             <div class="d-flex flex-column">
-                                    <p class="py-1 my-0 ml-2" style="font-size: 1.4vmax">Me</p>
-                                    <small class="ml-2" style="font-size: 1.2vmax;">Online</small>
+                                    <p class="py-1 my-0 ml-2 Awrt1">Me</p>
+                                    <small class="ml-2 Awrt">Online</small>
                                 </div>
                             </a>
                     <!--navbar 1st variant-->
                     
                         
                         <a class="navbar-nav mx-3">
-                            <i class="far fa-compass"></i>
+                            <i class="far fa-compass lopa"></i>
                         </a>
                         
                                 <div class="dropdown">
                                         <button type="button" class="btn btn-link" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v"></i>
+                                            <i class="fas fa-ellipsis-v lopa"></i>
                                             </button>
                                             <div class="dropdown-menu dropdown-menu-right">
                                                     <button class="dropdown-item" type="button">Action</button>
@@ -132,9 +132,9 @@
 
                 </nav>
                 <!--1st variant of container with differen t utilities-->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 d-flex flex-row align-items-center py-3 bg-info">
+                <div class="container del">
+                    <div class="row del">
+                        <div class="col-12 d-flex flex-row align-items-center py-3 bg-info del">
                             <div class="py-4 px-4 rounded-circle bg-light"><i class="far fa-bell-slash"></i></div>
                             <p class="text-left my-auto Awrt px-3 B1">Get Notified of New Messages<br>
                                 <small class="text-left ASwrt">Turn On Desktop Notification</small></p>
@@ -142,23 +142,25 @@
                     </div>
                 </div>
                 <!--search or new chat-->
-                <div class="input-group px-2 py-2 bg-light shadow">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text B" id="inputGroup-sizing-default"><i class="fas fa-search"></i></span>
+                <div class="input-group input-group-sm px-1 py-1 bg-light shadow" style="height: vmax">
+                    <div class="input-group-prepend py-0">
+                        <span class="input-group-text B" id="inputGroup-sizing-default"><i class="lopa fas fa-search"></i></span>
                     </div>
                     <input type="text" placeholder="Search or start a new chat" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                 </div>
                 <!--Chats contacts-->
-                <div class="container sigma scroll" id="level">
-
-                </div>
+                <a href="#2p" style="color: black;font-style: normal;text-decoration: none;">
+                    <div class="container sigma scroll" id="level">
+    
+                    </div>
+                </a>
             </div>
             <!--1st variant for residing chats-->
-            <div class="col-8 yellow-back hidden fullCover">
+            <div class="col-8 yellow-back hidden fullCover" id="2p">
                 <div class="io" style="position: absolute;overflow-x: hidden;width: 100%; z-index: 4;">
                     <div class="d-flex  justify-content-center align-items-center red-back" id="chat">
                         <div class="scooby text-center">
-                            <div class="fa-10x"><span class="fa-layers fa-fw"><i class="fas fas fa-wifi" data-fa-transform="shrink-8" style="color: blueviolet"></i>
+                            <div class="fa-10x"><span class="fa-layers fa-fw vivid"><i class="fas fas fa-wifi" data-fa-transform="shrink-8" style="color: blueviolet"></i>
                             <i class="fas fa-circle-notch fa-spin" data-fa-transform="grow-5" style="color:rgb(137, 201, 174)"></i>
                             </span></div>
                             <br><br><br>
@@ -183,13 +185,18 @@
                                     </a>
                                 <!--navbar 1st variant residing chat-->
                                 
-                                    
-                                    <a class="navbar-nav mx-3">
-                                        <i class="far fa-compass"></i>
+                                <a href="#1p" class="navbar-nav mx-3 je">
+                                        
                                     </a>
+                                    <a class="navbar-nav mx-3">
+                                        <i class="fas fa-phone lopa"></i>
+                                    </a>
+                                    <a class="navbar-nav mx-3">
+                                            <i class="fas fa-video lopa"></i>
+                                        </a>
                                     <div class="dropdown">
                                             <button type="button" class="btn btn-link" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fas fa-ellipsis-v"></i>
+                                                <i class="fas fa-ellipsis-v lopa"></i>
                                                 </button>
                                                 <div class="dropdown-menu dropdown-menu-right">
                                                         <button class="dropdown-item" type="button">Action</button>

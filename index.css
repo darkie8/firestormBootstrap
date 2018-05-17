@@ -14,13 +14,8 @@
     padding: 0 !important ;
     font-family: 'Muli', sans-serif !important;
 }
-.onepiece{
-    font-size: 12px !important;
-}
-.onepiece1{
-    font-size: 12px !important;
-}
-.sailormoon1, .onepiece1{
+
+.sailormoon1{
     font-weight: bold !important;
     font-family: 'Indie Flower', cursive !important;
 }
@@ -171,6 +166,11 @@
 .pain1{
     width: 100% !important;
 }
+.lopa{
+    width: 1.4vmax;
+    height: 1.4vmax;
+}
+
 @media (min-width: 850px){
     .pain{
         width: 60% !important;
@@ -179,4 +179,41 @@
     .pain1{
         width: 40% !important;
     }
+    
 }
+@media(max-width: 600px){
+    .sigma{
+        height: 80%;
+    }
+    .lopa{
+        width: 1.7vmax;
+        height: 1.7vmax;
+    }
+    .Awrt{
+        font-size: 1.9vw;
+        font-weight: bold;
+    }
+    .Awrt1{
+        font-size: 2.4vw;
+        font-weight: bold;
+}
+.del{
+    height: 0 !important;
+    overflow: hidden !important;
+}
+}
+@media(max-width: 500px){
+    .Awrt{
+        font-size: 3vw !important;
+        font-weight: bold;
+    }
+    .Awrt1{
+        font-size: 4vw !important;
+        font-weight: bold;
+}
+.lopa{
+    width: 3vmax;
+    height: 3vmax;
+}
+}
+

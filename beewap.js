@@ -89,9 +89,9 @@ var contJSON= {
     <div class="col-12 d-flex px-2 flex-row align-items-center py-3 kiop gama drooid" id="pix${i}">
         
         <div class="py-3 px-3 rounded-circle picture${i} lambda"></div>
-        <p class="text-left my-auto Awrt px-2 pl-3 sailormoon">${contJSON.contact[i-1].name}<br>
-            <small class="text-left ASwrt sailormoon1">Turn On Desktop Notification</small></p>
-            <div class="pix${i} ml-auto le"><small id="df">${contJSON.contact[i-1].time}</small></div>
+        <p class="text-left my-auto Awrt1 px-2 pl-3 ">${contJSON.contact[i-1].name}<br> 
+            <small class="text-left Awrt sailormoon1">Turn On Desktop Notification</small></p>
+            <div class="pix${i} ml-auto le "><small id="df" class="Awrt1">${contJSON.contact[i-1].time}</small></div>
     </div>`);
     $(`.picture${i}`).css(`background`,`url(static/A${i}.jpg)`);
     // add certain html in pix${i} class
@@ -103,10 +103,11 @@ var contJSON= {
         <div class="dropdown-menu">
         <a class="dropdown-item" href="#">Action</a>
         <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" id="pork${i}" href="#">Stories</a>
+        <a class="dropdown-item" href="#2p" id="pork${i}" href="#">Stories</a>
         <a class="dropdown-item" href="#" id="reUn${i}">${A}</a>
       </div>
     </div> `);
+    // making carousel for story part
     $(`#pork${i}`).click(function () { 
         $(`.set`).html(`<p style="font-size:1.5vmax;color:white">Stories</p><div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -239,18 +240,19 @@ var contJSON= {
         }
         $("#chat1,#chat").css({"height":"0","visibility":"hidden","overflow":"hidden"});
     });
+    // activating in my info window
     $(`.myPix`).click(function () { 
         $(".noob").animate({width: '100%'});
         $(".jig").animate({width: '160',height: '160'});
         $(".mig").animate({width: '100',height: '100'});
         
     });
+   // getting out of my info window
     $(`#prev`).click(function () { 
         $(".noob").animate({width: '0%'});
         $(".jig").animate({width: '0',height: '0'});
         $(".mig").animate({width: '0',height: '0'});
     });
-    let yu;
 
     $(`.zeta`).click(function() {
         $(`.io`).addClass("pain");
@@ -285,7 +287,7 @@ var contJSON= {
     // viewing pro pix
     $(`#viewPix`).click(function () { 
         
-        $(".you").html(`<img src="static/imgme.jpg" class="rounded d-none d-lg-block he " width="0" height="0">`)
+        $(".you").html(`<img src="static/imgme.jpg" class="rounded he " width="0" height="0">`)
         $("#pictureView").animate({height: '100%'});
         $(".he").animate({width: '80vmin',height: '80vmin'});
         
@@ -305,5 +307,19 @@ var contJSON= {
         $(".you").find(".zeta1").removeClass("rounded-circle").addClass("rounded").animate({width: '80vmin',height: '80vmin'}); 
     });
     
+    //main page view in less than 500px
+    if($(window).width()<= 500 && $(window).height() <= 1000 ){
+         $(`#1p`).removeClass("col-4").addClass("col-12");
+         $(`#2p`).removeClass("col-8");
+         $("#chat1,#chat").css({"height":"0","visibility":"hidden","overflow":"hidden"});
+         $(`.je`).html(`<i class="fas fa-angle-double-left lopa"></i>`);
+    }
+    else if($(window).width()<= 1000 && $(window).height() <= 500){
+        $(`.vivid`).html(`<i class="fas fas fa-wifi" data-fa-transform="shrink-8" style="color: blueviolet;width:15vmax;height:15vmax"></i>
+        <i class="fas fa-circle-notch fa-spin" data-fa-transform="shrink-4" style="color:rgb(137, 201, 174);"></i>`);
+        $(`.je`).html(`<i class="fas fa-angle-double-left lopa"></i>`);
+        $(`.del`).css({"height": "0","opacity":"0"});
+        $(`.sigma`).css("height","70vh");
+    }
     }); 
 
