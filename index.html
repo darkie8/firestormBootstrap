@@ -12,13 +12,35 @@
 </head>
 
 <body class="fullCover">
+        <!--viewing picture of me-->
+    <div  class="col" id="pictureView" style="position: absolute;
+        background-color: rgb(32, 28, 28);
+        z-index: 8;height: 0%;overflow-x: hidden;overflow-y: scroll;width: 100%;">
+        <div class="row  px-0 bg-secondary" >
+                <div class="col d-flex flex-row-reverse pt-2" style="color: whitesmoke">
+                    <div class="pr-4 jigsaw1"><i class="far fa-times-circle" style="width: 3vmax;height: 3vmax;"></i></div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col text-center">
+                    <hr>
+                    <p style="font-size: 2vmax;color: whitesmoke">Profile Picture</p>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <img src="static/imgme.jpg" class="rounded d-none d-lg-block he " width="0" height="0">
+                        
+            </div>
+    </div>
     <!--container for the page-->
     <div class="container alpha fullCover">
         <div class="row alpha fullCover">
             <!--1st variant for residing contacts-->
             <div class="col-4 red-back hidden fullCover">
+                
+                
                 <!--info about me-->
                 <div class="noob" style="position: absolute;background-color: white;z-index: 6;width: 0%;overflow-x: hidden;overflow-y: scroll">
+                    
                     <div class="row" style="padding: 0 !important;">
                         <div class="col d-flex align-items-center flex-row-reverse" style="height: 10vmax;background-color: tomato">
                             <div id="prev">
@@ -34,9 +56,9 @@
                     <img src="static/imgme.jpg" class="rounded-circle d-md-block d-lg-none mig" width="0" height="0">
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right">
-                                            <button class="dropdown-item" type="button">View picture</button>
+                                            <button class="dropdown-item" id="viewPix" type="button">View picture</button>
                                             <button class="dropdown-item" type="button">Download</button>
-                                            <button class="dropdown-item" type="button">Change profile picture</button>
+                                            <button class="dropdown-item" id="propixch" type="button">Change profile picture</button>
                                           </div>
                           
                         </div>

@@ -226,5 +226,17 @@ var contJSON= {
         $("#cea1").animate({width: '0',height: '0'});
         $("#cea").animate({width: '0',height: '0'});
     });
+    // viewing pro pix
+    $(`#viewPix`).click(function () { 
+        $("#pictureView").animate({height: '100%'});
+        $(".he").animate({width: '70vw',height: '70vw'});
+        
+    });
+    // exiting pro pix view
+    $(`.jigsaw1`).click(function () { 
+        $("#pictureView").animate({height: '0%'});
+        $(".he").animate({width: '0',height: '0'});
+        
+    });
     }); 
 
