@@ -204,7 +204,7 @@
     overflow: hidden !important;
 }
 }
-@media(max-width: 500px){
+@media(max-width: 540px){
     .Awrt{
         font-size: 3vw !important;
         font-weight: bold;

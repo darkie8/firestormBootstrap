@@ -11,7 +11,7 @@
 
 </head>
 
-<body class="fullCover" style="height: 100vh; overflow: hidden !important;">
+<body class="fullCover px-0" style="height: 100vh; overflow: hidden !important;">
     <!--viewing picture of me-->
     <div class="col" id="pictureView" style="position: absolute;
         background-color: rgb(32, 28, 28);
@@ -170,7 +170,7 @@
                 </a>
             </div>
             <!--1st variant for residing chats-->
-            <div class="col-8 yellow-back hidden fullCover" id="2p">
+            <div class="col-8 yellow-back hidden fullCover w-100 px-0" id="2p">
                 <div class="io" style="position: absolute;overflow-x: hidden;width: 100%; z-index: 4;">
                     <div class="d-flex  justify-content-center align-items-center red-back" id="chat">
                         <div class="scooby text-center">
@@ -230,16 +230,18 @@
 
 
 
-                        <div class="mt-auto bg-light">
-                            <div class="input-group px-2 py-2 bg-light">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text " id="inputGroup-sizing-default"><i class="fas fa-microphone" title="Record"></i></span>
-                                    <span class="input-group-text " id="inputGroup-sizing-default"><i title="smiley" class="far fa-smile"></i></span>
-                                </div>
-                                <input type="text" placeholder="Type message" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                                <div class="input-group-prepend">
-                                        <span class="input-group-text B" id="inputGroup-sizing-default"><i class="fas fa-arrow-alt-circle-up" title="send"></i></span>
-                                    </div>
+                        <div class="px-0 bg-light container" style="overflow: hidden;">
+                            <div class=" py-2 bg-light row mx-0">
+                                
+                                    <button class="btn btn-outline-secondary col-1 d-flex justify-content-center" type="button"><i class="fas fa-microphone lopa" title="Record"></i></button>
+                                    
+                                
+                                    <button class="btn btn-outline-secondary col-1 d-flex justify-content-center" type="button"><i title="smiley" class="far fa-smile lopa"></i></button>
+                                
+                                <textarea style="border-color: white;height: 5vh;" class="texting col-9 px-0"></textarea>
+                                
+                                    <button class="btn btn-outline-secondary col-1 d-flex justify-content-center" type="button"><i class="fas fa-arrow-alt-circle-up lopa" title="send"></i></button>
+                                    
                             </div>
                         </div>
 

@@ -1,55 +1,63 @@
 var contJSON= {
 	"contact": [{
-			"name": "Android1",
+            "name": "Android1",
+            "messages":[],
             "number": "#####",
             "last_seen": "last seen 2.05 am",
             "time": "3.09 am"
             
         },
 		{
-			"name": "Android2",
+            "name": "Android2",
+            "messages":[],
             "number": "#####",
             "last_seen": "last seen 1.00 am",
             "time": "today"
 
         },
 		{
-			"name": "Android3",
+            "name": "Android3",
+            "messages":[],
             "number": "#####",
             "last_seen": "last seen yeesterday 2.05 pm",
             "time": "yesterday"
             
 		},
 		{
-			"name": "Android4",
+            "name": "Android4",
+            "messages":[],
             "number": "#####",
             "last_seen": "last seen 4.00 am",
             "time": "03/05/18"
 
         },
 		{
-			"name": "Android5",
+            "name": "Android5",
+            "messages":[],
             "number": "#####",
             "last_seen": "last seen 03/05/18",
             "time": "03/05/18"
 
         },
 		{
-			"name": "Android6",
+            "name": "Android6",
+            "messages":[],
             "number": "#####",
             "last_seen": "last seen 1.00 am",
             "time": "05/05/18"
 
         },
 		{
-			"name": "Android7",
+            "name": "Android7",
+            "messages":[],
             "number": "#####",
             "last_seen": "last seen 9.00 am",
             "time": "08/02/18"
 
         },
 		{
-			"name": "Android8",
+            "name": "Android8",
+            "messages":[],
             "number": "#####",
             "last_seen": "last seen 10.00 am",
             "time": "04/01/18"
@@ -366,14 +374,14 @@ var contJSON= {
         $(`#2p`).removeClass("col-8").addClass("col-7");
    }
     //main page view in less than 500px
-    if($(window).width()<= 500 && $(window).height() <= 1000 ){
+    if($(window).width()<= 540 && $(window).height() <= 1000 ){
          $(`#1p`).removeClass("col-5").addClass("col-12");
          $(`#2p`).removeClass("col-7");
          $("#chat1,#chat").css({"height":"0","visibility":"hidden","overflow":"hidden"});
          $(`.je`).html(`<i class="fas fa-angle-double-left lopa"></i>`);
          
     }
-    else if($(window).width()<= 1000 && $(window).height() <= 500){
+    else if($(window).width()<= 1000 && $(window).height() <= 540){
         $(`.vivid`).html(`<i class="fas fas fa-wifi" data-fa-transform="shrink-8" style="color: blueviolet;width:15vmax;height:15vmax"></i>
         <i class="fas fa-circle-notch fa-spin" data-fa-transform="shrink-4" style="color:rgb(137, 201, 174);"></i>`);
         $(`.je`).html(`<i class="fas fa-angle-double-left lopa"></i>`);
@@ -395,5 +403,12 @@ var contJSON= {
     $(`.pretty,.dir`).click(function () { 
         $(".toob").animate({width: '0%'});
     });
+    
+     let e
+    $(`.send`).click(function () { 
+        alert($(`.texting`).html())
+        
+    });
+    
     }); 
-
+    
