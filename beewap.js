@@ -79,19 +79,19 @@ var contJSON= {
     var n = false
    // initaiting jquerry library 
   $(document).ready(function(){
-
+    $(window).resize(function(){location.reload();});
     // starting for loop
     for(let i =1;i<9;i++)
     { 
       // add certain html in level1 id
         $(`#level`).append(`<div class="row">
 
-    <div class="col-12 d-flex px-2 flex-row align-items-center py-3 kiop gama drooid" id="pix${i}">
+    <div class="col-12 d-flex px-2 flex-row align-items-center py-3 kiop gama drooid stuart${i}" id="pix${i}">
         
         <div class="py-3 px-3 rounded-circle picture${i} lambda"></div>
         <p class="text-left my-auto Awrt1 px-2 pl-3 ">${contJSON.contact[i-1].name}<br> 
             <small class="text-left Awrt sailormoon1">Turn On Desktop Notification</small></p>
-            <div class="pix${i} ml-auto le "><small id="df" class="Awrt1">${contJSON.contact[i-1].time}</small></div>
+            <div class="pix${i} ml-auto le Awrt"><small id="df" class="Awrt1">${contJSON.contact[i-1].time}</small></div>
     </div>`);
     $(`.picture${i}`).css(`background`,`url(static/A${i}.jpg)`);
     // add certain html in pix${i} class
@@ -104,7 +104,7 @@ var contJSON= {
         <a class="dropdown-item" href="#">Action</a>
         <a class="dropdown-item" href="#">Another action</a>
         <a class="dropdown-item" href="#2p" id="pork${i}" href="#">Stories</a>
-        <a class="dropdown-item" href="#" id="reUn${i}">${A}</a>
+        <a class="dropdown-item reUn${i}" href="#" id="reUn${i}">${A}</a>
       </div>
     </div> `);
     // making carousel for story part
@@ -141,6 +141,18 @@ var contJSON= {
         $(`.number`).text(`${contJSON.contact[i-1].number}`);
         $(`.lstSeen`).text(`${contJSON.contact[i-1].last_seen}`);
     });
+    // redirecting to chat from contacts
+    $(`.printcont`).append(`<div class="row">
+    <a href="#2p" class ="dir" style="text-decoration:none;color:white;width:100%">
+        <div class="col-12 d-flex flex-column bg-info dir" style="color: beige" id="sol${i}">
+            
+            <p class="ASwrt">${contJSON.contact[i-1].name}</p>
+            <p class="Aswrt1">${contJSON.contact[i-1].number}</p>
+        </div>
+    </a>
+</div>
+<br>
+</div> `);
     $(`.ken`).on({
          click: function(){ n= true}, // if dropdown is clicked..n=true
          mouseleave: function(){n= false} // if mouse leaves dropdown n=false
@@ -168,6 +180,46 @@ var contJSON= {
         console.log(n)
         
          })
+    $(`#sol${i}`).click(function () { 
+        $(`#pix${i}`).removeClass("dreco").removeClass("shadow");
+        a[i-1]= true
+        $(`#reUn${i}`).html(contJSON.readChoice[0]);
+        
+    });
+         // contact clicked
+         $(`#sol${i}`).click(function () { 
+             // ending the highlight if id =pix(number) is clicked 
+         
+        
+        $(".zeta,.zeta1").attr("src", `static/A${i}.jpg`); // picture of the contact uploaded in the zeta class container
+        $(`.zeta`).click(function () { 
+            $(".zeta1").attr("src", `static/A${i}.jpg`);
+            $("#cea1").animate({width: '160',height: '160'});
+            $("#cea").animate({width: '100',height: '100'});
+            
+        });
+        $(`.contName`).text(`${contJSON.contact[i-1].name}`);
+        $(`.number`).text(`${contJSON.contact[i-1].number}`);
+        $(`.lstSeen`).text(`${contJSON.contact[i-1].last_seen}`);
+        $(`.set`).empty(); // to empty the prev loaded convo
+
+     // making random chat conversation 
+     // loop starts   
+    for(let x =1;x<=i;x++) // increases the amount of convo with increasing order
+       {$(`.set`).append(`<div class="Anushka my-3 mx-3 d-flex py-3">
+                                <div class="flex-fill wb" id="cb1"><p class="mx-4 rounded w-50">Lorem ipsum dolor sit amet consectetur.</p></div>
+                                <div class="flex-fill wb" id="cb11"><p class="mx-4 rounded text-right"></p></div>
+                            </div>
+                            <div class="Anushka my-3 mx-3 d-flex py-3">
+                                <div class="flex-fill wb" id="cb1"><p class="mx-auto rounded"></p></div>
+                                <div class="flex-fill wb " id="cb11"><p class="mx-4 rounded float-right w-50">Lorem ipsum dolor sit amet consectetur.</p></div>
+                            </div>`).removeClass("bg-dark").removeClass("align-items-center").removeClass("justify-content-center") ;
+                        
+                            } // for loop ends
+    }); // function calling ends
+             
+         
+         
         // id pix${i} is clicked 
         $(`#pix${i}`).click(function () {
             // if n is function wont be called
@@ -259,8 +311,7 @@ var contJSON= {
     });
 
     $(`.zeta`).click(function() {
-        $(`.io`).addClass("pain");
-        $("#phi").addClass("pain1");
+        
         if($(window).width() >= 850 )
     {   // getting in the contact info window
         
@@ -284,8 +335,7 @@ var contJSON= {
         $(".io").animate({width: '100%'});
         $("#cea1").animate({width: '0',height: '0'});
         $("#cea").animate({width: '0',height: '0'});
-        $(`.io`).removeClass("pain");
-        $("#phi").removeClass("pain1");
+        
        });
 
     // viewing pro pix
@@ -310,13 +360,18 @@ var contJSON= {
         $(".you").html($(".takeshi").html())
         $(".you").find(".zeta1").removeClass("rounded-circle").addClass("rounded").animate({width: '80vmin',height: '80vmin'}); 
     });
-    
+    // main page view less that 730px
+    if($(window).width()<= 730){
+        $(`#1p`).removeClass("col-4").addClass("col-5");
+        $(`#2p`).removeClass("col-8").addClass("col-7");
+   }
     //main page view in less than 500px
     if($(window).width()<= 500 && $(window).height() <= 1000 ){
-         $(`#1p`).removeClass("col-4").addClass("col-12");
-         $(`#2p`).removeClass("col-8");
+         $(`#1p`).removeClass("col-5").addClass("col-12");
+         $(`#2p`).removeClass("col-7");
          $("#chat1,#chat").css({"height":"0","visibility":"hidden","overflow":"hidden"});
          $(`.je`).html(`<i class="fas fa-angle-double-left lopa"></i>`);
+         
     }
     else if($(window).width()<= 1000 && $(window).height() <= 500){
         $(`.vivid`).html(`<i class="fas fas fa-wifi" data-fa-transform="shrink-8" style="color: blueviolet;width:15vmax;height:15vmax"></i>
@@ -324,27 +379,21 @@ var contJSON= {
         $(`.je`).html(`<i class="fas fa-angle-double-left lopa"></i>`);
         $(`.del`).css({"height": "0","opacity":"0"});
         $(`.sigma`).css("height","70vh");
+        
     }
     // contacts menu
     $(`#contactsAll`).click(function () { 
-            $(".toob").animate({width: '100%'});
-            for(i=0;i<8;i++){
-                $(`.printcont`).append(`<div class="row">
-                <div class="col-12 d-flex flex-column bg-info dir" style="color: beige" id="sol${i+1}">
-                    
-                    <p class="ASwrt">${contJSON.contact[i].name}</p>
-                    <p class="Aswrt1">${contJSON.contact[i].number}</p>
-                </div>
-            </div>
-            <br>
-        </div> `);
-            }
-    
+            $(".toob").animate({width: '100%'});});
+            
+   
+    // removing font page when click to access chat 
+    $(`.dir`).click(function () { 
+        $("#chat1,#chat").css({"height":"0","visibility":"hidden","overflow":"hidden"});
         
     });
-    $(".pretty").click(function () { 
+    // going out from contacts window
+    $(`.pretty,.dir`).click(function () { 
         $(".toob").animate({width: '0%'});
-        
     });
     }); 
 
