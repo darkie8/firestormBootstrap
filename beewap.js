@@ -98,8 +98,8 @@ var contJSON= {
         
         <div class="py-3 px-3 rounded-circle picture${i} lambda"></div>
         <p class="text-left my-auto Awrt1 px-2 pl-3 ">${contJSON.contact[i-1].name}<br> 
-            <small class="text-left Awrt sailormoon1">Turn On Desktop Notification</small></p>
-            <div class="pix${i} ml-auto le Awrt"><small id="df" class="Awrt1">${contJSON.contact[i-1].time}</small></div>
+            <small class="text-left Awrt sailormoon1">loptgfvgh ghvghv hgfvhg</small></p>
+            <div class="pix${i} ml-auto le Awrt"><small class="Awrt sailormoon1">${contJSON.contact[i-1].time}</small></div>
     </div>`);
     $(`.picture${i}`).css(`background`,`url(static/A${i}.jpg)`);
     // add certain html in pix${i} class
@@ -214,13 +214,13 @@ var contJSON= {
      // making random chat conversation 
      // loop starts   
     for(let x =1;x<=i;x++) // increases the amount of convo with increasing order
-       {$(`.set`).append(`<div class="Anushka my-3 mx-3 d-flex py-3">
-                                <div class="flex-fill wb" id="cb1"><p class="mx-4 rounded w-50">Lorem ipsum dolor sit amet consectetur.</p></div>
-                                <div class="flex-fill wb" id="cb11"><p class="mx-4 rounded text-right"></p></div>
+       {$(`.set`).append(`<div class="Anushka my-3 mx-3 d-flex py-3 Awrt">
+                                <div class="flex-fill wb Awrt" ><p class="mx-4 rounded w-50 Awrt">Lorem ipsum dolor sit amet consectetur.</p></div>
+                                <div class="flex-fill wb Awrt" ><p class="mx-4 rounded text-right"></p></div>
                             </div>
-                            <div class="Anushka my-3 mx-3 d-flex py-3">
-                                <div class="flex-fill wb" id="cb1"><p class="mx-auto rounded"></p></div>
-                                <div class="flex-fill wb " id="cb11"><p class="mx-4 rounded float-right w-50">Lorem ipsum dolor sit amet consectetur.</p></div>
+                            <div class="Anushka my-3 mx-3 d-flex py-3 Awrt">
+                                <div class="flex-fill wb Awrt" ><p class="mx-auto rounded"></p></div>
+                                <div class="flex-fill wb Awrt"><p class="mx-4 rounded float-right w-50 Awrt">Lorem ipsum dolor sit amet consectetur.</p></div>
                             </div>`).removeClass("bg-dark").removeClass("align-items-center").removeClass("justify-content-center") ;
                         
                             } // for loop ends
@@ -262,12 +262,12 @@ var contJSON= {
      // loop starts   
     for(let x =1;x<=i;x++) // increases the amount of convo with increasing order
        {$(`.set`).append(`<div class="Anushka my-3 mx-3 d-flex py-3">
-                                <div class="flex-fill wb" id="cb1"><p class="mx-4 rounded w-50">Lorem ipsum dolor sit amet consectetur.</p></div>
-                                <div class="flex-fill wb" id="cb11"><p class="mx-4 rounded text-right"></p></div>
+                                <div class="flex-fill wb Awrt" ><p class="mx-4 rounded w-50">Lorem ipsum dolor sit amet consectetur.</p></div>
+                                <div class="flex-fill wb Awrt" ><p class="mx-4 rounded text-right"></p></div>
                             </div>
                             <div class="Anushka my-3 mx-3 d-flex py-3">
-                                <div class="flex-fill wb" id="cb1"><p class="mx-auto rounded"></p></div>
-                                <div class="flex-fill wb " id="cb11"><p class="mx-4 rounded float-right w-50">Lorem ipsum dolor sit amet consectetur.</p></div>
+                                <div class="flex-fill wb Awrt" ><p class="mx-auto rounded"></p></div>
+                                <div class="flex-fill wb Awrt"><p class="mx-4 rounded float-right w-50">Lorem ipsum dolor sit amet consectetur.</p></div>
                             </div>`).removeClass("bg-dark").removeClass("align-items-center").removeClass("justify-content-center") ;
                         
                             } // for loop ends
@@ -404,11 +404,6 @@ var contJSON= {
         $(".toob").animate({width: '0%'});
     });
     
-     let e
-    $(`.send`).click(function () { 
-        alert($(`.texting`).html())
-        
-    });
     
     }); 
     
